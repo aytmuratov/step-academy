@@ -1,0 +1,256 @@
+{
+  "sayt": {
+    "nom": "Step Academy",
+    "slogan": "AI bilan yaratilgan zamonaviy o'quv markazi",
+    "tavsif": "Step Academy — bu IT, Python, Ingliz va Rus tillarini o'rgatadigan o'quv markazi. Barcha darslar o'zbek tilida, har bir mavzuda YouTube videolar bilan."
+  },
+  "kurslar": [
+    {
+      "slug": "python",
+      "nom": "Python",
+      "tafrus": "",
+      "ikon": "🐍",
+      "tarif": "Python — dunyodagi eng oson va eng mashhur dasturlash tili. Noldan boshlang va birinchi dasturingizni yozing.",
+      "daraja": "Boshlang'ich",
+      "davomiyligi": "4 hafta",
+      "darslar": [
+        {
+          "slug": "kirish",
+          "nom": "Python'ga kirish va o'rnatish",
+          "tarif": "Python nima, nima uchun Python, kompyuterga qanday o'rnatiladi va birinchi dastur.",
+          "matn": [
+            "Python — 1991-yilda Guido van Rossum tomonidan yaratilgan, o'qishga juda oson dasturlash tili. U sun'iy intellekt, veb-saytlar, botlar, ilovalar va yanada ko'p narsalarda ishlatiladi.",
+            "Python'ni python.org saytidan bepul yuklab olasiz. O'rnatishda \"Add to PATH\" degan katakchani albatta belgilang — bu keyin ishlash uchun juda muhim.",
+            "Birinchi dasturingiz har doim \"Hello, World!\" bilan boshlanadi. Quyidagi kodni yozing va ishga tushiring."
+          ],
+          "kod": "print(\"Hello, World!\")\nprint(\"Step Academy ga xush kelibsiz!\")",
+          "video": "cQT33yu9pY8"
+        },
+        {
+          "slug": "ozgaruvchilar",
+          "nom": "O'zgaruvchilar va ma'lumot turlari",
+          "tarif": "Ma'lumotni saqlash: sonlar, matnlar, haqiqat qiymatlari (bool) va ular bilan ishlash.",
+          "matn": [
+            "O'zgaruvchi — bu ma'lumot saqlanadigan \"quti\". Python'da unga xohlagan nomni berasiz: ism, yosh, narx va h.k.",
+            "Eng ko'p ishlatiladigan ma'lumot turlari: int (butun son), float (haqiqiy son), str (matn), bool (haqiqat qiymati: True/False).",
+            "type() funksiyasi o'zgaruvchining turini ko'rsatadi. Foydalanuvchidan ma'lumot olish uchun input() ishlatiladi — faqat esda turing, u doim matn qaytaradi, son kerak bo'lsa int() bilan o'zgartirasiz."
+          ],
+          "kod": "ism = \"Aziz\"\nyosh = 18\nnarx = 2.5\noqiyapti = True\n\nprint(ism, \"—\", yosh, \"yoshda\")\nprint(type(narx))\n\nson = int(input(\"Son kiriting: \"))\nprint(\"Sizning 2 barobingiz:\", son * 2)",
+          "video": "LKFrQXaoSMQ"
+        },
+        {
+          "slug": "if-else",
+          "nom": "Shartlar: if / elif / else",
+          "tarif": "Dastur qaror qabul qilishni o'rganadi: agar shart bajarilsa — bitta, aks holda — boshqa harakat.",
+          "matn": [
+            "if — \"agar\" degan ma'noni anglatadi. Dastur shartni tekshiradi: to'g'ri bo'lsa if ichidagi kod ishlaydi, to'g'ri bo'lmasa else ichidagi kod ishlaydi.",
+            "elif — \"aks holda agar\" — bir nechta shartni navbat bilan tekshirish uchun ishlatiladi. Python'da tirqish (bo'sh joy) juda muhim: if dan keyingi kod 4 ta bo'sh joy bilan suriladi.",
+            "Taqqoslash operatorlari: == (teng), != (teng emas), > (katta), < (kichik), >= (katta yoki teng), <= (kichik yoki teng). Bir nechta shartni and (va), or (yoki), not (emas) bilan birlashtirasiz."
+          ],
+          "kod": "yosh = int(input(\"Yoshingiz: \"))\n\nif yosh >= 18:\n    print(\"Siz kattalar guruhiga kirishingiz mumkin\")\nelif yosh >= 14:\n    print(\"Siz o'smirlar guruhidasiz\")\nelse:\n    print(\"Hali kichiksiz, kuting!\")\n\nball = 87\nif ball >= 55 and ball >= 85:\n    print(\"A'lo baho!\")",
+          "video": "FvMPfrgGeKs"
+        },
+        {
+          "slug": "sikllar",
+          "nom": "Sikllar: for va while",
+          "tarif": "Bir xil ishni takrorlash: for — sanab, while — shart bajarilmaguncha.",
+          "matn": [
+            "for sikli — biror ro'yxatdagi har bir element bilan ishlash uchun. range(5) yozsangiz, 0 dan 4 gacha sanaydi.",
+            "while sikli — shart true bo'lgan ekan takrorlanaveradi. Shuning uchun sikl ichida shartni o'zgartiradigan kod bo'lmasa, dastur cheksiz ishlaydi (xato!).",
+            "break — siklni to'xtatadi, continue — joriy qadamni tashlab keyingisiga o'tadi."
+          ],
+          "kod": "# for sikli\nfor i in range(5):\n    print(\"Qadam:\", i)\n\n# while sikli\nson = 5\nwhile son > 0:\n    print(son)\n    son = son - 1\n\nprint(\"Tugadi!\")",
+          "video": "KWgYha0clzw"
+        },
+        {
+          "slug": "funksiyalar",
+          "nom": "Funksiyalar (def)",
+          "tarif": "Kodni qayta ishlatish: bir marta yozasiz, xohlagancha chaqirasiz.",
+          "matn": [
+            "Funksiya — ma'lum bir ishni bajaruvchi kod bloki. def so'zi bilan yaratiladi va chaqirilganda ishga tushadi.",
+            "Funksiya argument (parametr) qabul qilishi va return bilan natija qaytarishi mumkin. Funksiyalar dasturni tartiblaydi, kod takrorlanishining oldini oladi."
+          ],
+          "kod": "def salomla(ism):\n    print(\"Salom, \" + ism + \"! 👋\")\n\ndef qosh(a, b):\n    return a + b\n\nsalomla(\"Dilshod\")\nsalomla(\"Malika\")\nnatija = qosh(10, 25)\nprint(\"Jami:\", natija)",
+          "video": "89cGQjB5R4M"
+        },
+        {
+          "slug": "royxat-lugat",
+          "nom": "Ro'yxatlar (list) va lug'atlar (dict)",
+          "tarif": "Bir joyda ko'p ma'lumot saqlash: tartiblangan ro'yxat va kalit-qiymat juftliklari.",
+          "matn": [
+            "Ro'yxat (list) — tartiblangan ko'p elementli to'plam. massiv, kvadrat qavslar [ va ] bilan yoziladi, indeks 0 dan boshlanadi.",
+            "Lug'at (dict) — kalit: qiymat juftliklaridan iborat. Misol: talaba ma'lumotlari, narxlar ro'yxati, so'zlari tarjimasi — hammasi uchun qulay.",
+            "append() ro'yxatga element qo'shadi, keys() / values() esa lug'at kalitlarini va qiymatlarini ko'rsatadi."
+          ],
+          "kod": "oquvchilar = [\"Aziz\", \"Malika\", \"Dilshod\"]\noquvchilar.append(\"Kamola\")\nprint(oquvchilar[0])\nprint(\"Soni:\", len(oquvchilar))\n\ntalaba = {\n    \"ism\": \"Aziz\",\n    \"yosh\": 18,\n    \"kurs\": \"Python\"\n}\nprint(talaba[\"ism\"], \"—\", talaba[\"kurs\"])\n\nfor ism in oquvchilar:\n    print(\"Salom,\", ism)",
+          "video": "gOMW_n2-2Mw"
+        }
+      ]
+    },
+    {
+      "slug": "it",
+      "nom": "IT asoslari",
+      "ikon": "💻",
+      "tarif": "Kompyuter nima, qanday ishlaydi, dasturlash nima — IT olamidagi birinchi qadamlaringiz.",
+      "daraja": "Noldan boshlang'ich",
+      "davomiyligi": "3 hafta",
+      "darslar": [
+        {
+          "slug": "kompyuter-asoslari",
+          "nom": "Kompyuter asoslari",
+          "tarif": "Kompyuter tuzilishi: monitor, klaviatura, protsessor, xotira va disk.",
+          "matn": [
+            "Kompyuter — ma'lumotni qabul qiladigan, qayta ishlaydigan va saqlaydigan qurilma. Uning bosh miyasi — protsessor (CPU).",
+            "RAM — tezkor xotira, dasturlar ishlaganda ma'lumot shu yerda saqlanadi. DISK (HDD/SSD) esa ma'lumotni o'chirilsa ham saqlab turadi.",
+            "Tizimli dasturlar (Windows, Linux, macOS) kompyuterni boshqaradi — ularsiz qurilma ishlamaydi."
+          ],
+          "kod": "",
+          "video": "rtnPIb6Dszk"
+        },
+        {
+          "slug": "qanday-ishlaydi",
+          "nom": "Kompyuter qanday ishlaydi?",
+          "tarif": "Noldan bilim: 0 va 1, mantiqiy darvozalar, CPU ning islash printsipi.",
+          "matn": [
+            "Kompyuter hamma narsani ikkilik tizimda — 0 va 1 ko'rinishida tushunadi. Harflar, rasmlar, ovoz — hammasi raqamlarga aylantiriladi.",
+            "Protsessor katta miqdordagi kichik topshiriqlarni soniyada milliardlab marta bajaradi — aynan shu sababli hammasi shu tezlikda ishlaydi."
+          ],
+          "kod": "",
+          "video": "rl0jkP9kOMw"
+        },
+        {
+          "slug": "dasturlashga-kirish",
+          "nom": "Dasturlashga kirish",
+          "tarif": "Algoritm nima, dasturlash tillari qanday tanlanadi, birinchi mantiqiy masalalar.",
+          "matn": [
+            "Dasturlash — bu kompyuterga bajarishi kerak bo'lgan qadamlarni tartib bilan yozish. Qadamlar ketma-ketligiga algoritm deyiladi.",
+            "Masalan: choy damlash ham algoritm: choynak → choy bargi → qaynoq suv → kutish → ichish. Dasturchi aynan shu qadamlarni til yozuvida yozadi.",
+            "Python, JavaScript, C++, Java — barcha tillar bitta maqsadga xizmat qiladi, farqi sintaksis va soha: Python — AI va o'rganish, JavaScript — saytlar, C++ — o'yinlar uchun kuchli."
+          ],
+          "kod": "# Sodda algoritm: juft sonmi?\nson = int(input(\"Son kiriting: \"))\nif son % 2 == 0:\n    print(\"Bu juft son\")\nelse:\n    print(\"Bu toq son\")",
+          "video": "zOjov-2OZ0E"
+        },
+        {
+          "slug": "cs50",
+          "nom": "Harvard CS50 — bepul to'liq kurs",
+          "tarif": "Dunyodagi eng mashhur IT kursi. Boshlang'ich darajadan algoritmlargacha.",
+          "matn": [
+            "CS50 — Garvard universitetining mashhur dasturlash kursi. u hammasi noldan boshlaydi va chuqur mavzulargacha yetkazadi.",
+            "Bu kursni o'z tilingizda — o'zbekcha konspekt yozib borish bilan o'qish juda foydali: video ko'rasiz, konspekt olasiz, keyin o'zingiz kod yozib ko'rasiz."
+          ],
+          "kod": "",
+          "video": "8mAITcNt710"
+        }
+      ]
+    },
+    {
+      "slug": "ingliz",
+      "nom": "Ingliz tili",
+      "ikon": "🇬🇧",
+      "tarif": "Grammatikadan erkin suhbatgacha. Global imtihonlarga tayyorlovchi kurs.",
+      "daraja": "A1 → B2",
+      "davomiyligi": "8 hafta",
+      "darslar": [
+        {
+          "slug": "grammatika-asoslari",
+          "nom": "Grammatika asoslari",
+          "tarif": "Artikl, otnish, sonlar — ingliz tilining poydevori.",
+          "matn": [
+            "Ingliz tilida artikllar (a, an, the) va to'g'ri otnish (subject-verb agreement) — eng ko'p uchraydigan xatolar manbai.",
+            "Gap qurilishi oddiy: Subyekt + Fe'l + Obyekt. «I learn English» — men ingliz tilini o'rganaman.",
+            "Kuniga 30 daqiqa grammatika mashqlari bir oy ichida sezilarli natija beradi."
+          ],
+          "kod": "",
+          "video": "28vxXnY3PL4"
+        },
+        {
+          "slug": "feal-zamonlari",
+          "nom": "Fe'llar zamonlari (Tenses)",
+          "tarif": "Present, Past, Future — o'tgan, hozir va kelajak zamoni.",
+          "matn": [
+            "Ingliz tilida 12 ta fe'l zomoni bor, ammo asosiylari — Simple Present, Past va Future shularni bilishingiz kifoya.",
+            "Har bir zamon o'z qo'shimchasiga ega: is/am/are (hozir), was/were (o'tgan), will (kelajak). Qo'shimchalarni yodlasangiz, zamon tanlash osonlashadi."
+          ],
+          "kod": "",
+          "video": "sCiG6rlk2Bc"
+        },
+        {
+          "slug": "gap-tuzilishi",
+          "nom": "Gap tuzilishi va so'z tartibi",
+          "tarif": "Savol, ijobiy va manfiy gaplar to'g'ri qanday tuziladi.",
+          "matn": [
+            "Ingliz tilida so'z tartibi juda muhim: kelishik o'zgarmaydi, vazifani so'z tartibi bajaradi.",
+            "Savol tuzish uchun yordamchi fe'l (do/does/did/is/are) gap boshiga chiqadi: «Do you speak English?»"
+          ],
+          "kod": "",
+          "video": "6LFjVC3cHjI"
+        },
+        {
+          "slug": "soz-boyligi",
+          "nom": "So'z boyligi — 37 darslik kurs",
+          "tarif": "Kunlik so'zlarni o'rganish tizimi va ularni esda qoldirish usullari.",
+          "matn": [
+            "Til — bu asosan so'z boyligi. 3000 ta eng ko'p ishlatiladigan so'zni bilsangiz, 95% matnni tushunasiz.",
+            "Yangi so'zni faqat yozib qolmasdan, undan gap tuzib chiqing — shunda u miyada uzoq muddat qoladi."
+          ],
+          "kod": "",
+          "video": "FI2OKNMWGc4"
+        }
+      ]
+    },
+    {
+      "slug": "rus",
+      "nom": "Rus tili",
+      "ikon": "🇷🇺",
+      "tarif": "Kirill alifbosidan erkin suhbatgacha. Ish va o'quv imtihonlari uchun tayyorgarlik.",
+      "daraja": "A1 → B1",
+      "davomiyligi": "8 hafta",
+      "darslar": [
+        {
+          "slug": "kirill-alifbosi",
+          "nom": "Kirill alifbosi va talaffuz",
+          "tarif": "33 ta harf, ularning ovozi va to'g'ri talaffuz qoidaları.",
+          "matn": [
+            "Rus tilida 33 ta harf bor: 21 unli, 10 sokil va 2 qo'shimcha harf (ь, ъ).",
+            "Birinchi vazifa — harflarni to'g'ri o'qishni o'rganish, chunki talaffuz keyingi barcha mavzularga ta'sir qiladi."
+          ],
+          "kod": "",
+          "video": "sKjcYQ-7ICo"
+        },
+        {
+          "slug": "salomlashish",
+          "nom": "Salomlashish va tanishuv",
+          "tarif": "Привет, Здравствуйте — qachon qaysi biri ishlatiladi.",
+          "matn": [
+            "«Привet» — do'stlar orasida, «Здравствуйте» — rasmiy salomlashish. Birinchi suhbatda o'z ismingizni aytish va qayerdan ekaningizni aytiladi.",
+            "«Меня зовут...» — Mening ismim... degan ibora suhbatning kaliti."
+          ],
+          "kod": "",
+          "video": "kMcImFhmCUY"
+        },
+        {
+          "slug": "oz-haqida",
+          "nom": "O'z haqida gapirish",
+          "tarif": "Yosh, kasb, sevimli mashg'ulot — birinchi monologingiz.",
+          "matn": [
+            "«Мне 18 лет» — Menga 18 yosh. «Я студент» — Men talabaman kabi gaplar bilan o'zingizni tanishtirasiz.",
+            "Kuniga 5 ta yangi gap yodlash — bir haftada kichik suhbat qurishga yetadi."
+          ],
+          "kod": "",
+          "video": "R0YagbmLU8A"
+        },
+        {
+          "slug": "asosiy-iboralar",
+          "nom": "Kundalik hayotdagi asosiy iboralar",
+          "tarif": "Do'konda, yo'lda va ishda ishlatiladigan tayyor iboralar.",
+          "matn": [
+            "«Как тебя зовут?» (Isming nima?), «Сколько стоит?» (Narxi qancha?) — eng tez kerak bo'ladigan iboralar.",
+            "Tayyor iboralarni to'plab yod olish — suhbatni darhol boshlash imkonini beradi."
+          ],
+          "kod": "",
+          "video": "QrS50vAHG_8"
+        }
+      ]
+    }
+  ]
+}

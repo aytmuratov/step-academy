@@ -1,0 +1,247 @@
+:root {
+  --fon: #0d1117;
+  --panel: #161b22;
+  --panel2: #1c2333;
+  --chiziq: #2d3646;
+  --matn: #e6edf3;
+  --ikkinchi: #9aa7b8;
+  --akcent: #4f8cff;
+  --akcent2: #22c55e;
+  --xato: #ef4444;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: "Segoe UI", Tahoma, sans-serif;
+  background: var(--fon);
+  color: var(--matn);
+  line-height: 1.65;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+a { color: var(--akcent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* ===== Shapka ===== */
+header {
+  background: rgba(13, 17, 23, 0.92);
+  border-bottom: 1px solid var(--chiziq);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  backdrop-filter: blur(8px);
+}
+.nav {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 14px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.logo { font-size: 1.25rem; font-weight: 700; color: var(--matn); }
+.logo span { color: var(--akcent); }
+.nav-links { display: flex; gap: 18px; flex-wrap: wrap; }
+.nav-links a { color: var(--ikkinchi); font-size: 0.95rem; }
+.nav-links a:hover { color: var(--matn); text-decoration: none; }
+
+/* ===== Asosiy ===== */
+main {
+  flex: 1;
+  max-width: 1100px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 32px 20px 60px;
+}
+
+.hero {
+  text-align: center;
+  padding: 56px 20px 48px;
+  background: radial-gradient(ellipse at top, rgba(79, 140, 255, 0.16), transparent 65%);
+  border-bottom: 1px solid var(--chiziq);
+  margin: -32px -20px 40px;
+}
+.hero h1 {
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  margin-bottom: 12px;
+}
+.hero h1 span { color: var(--akcent); }
+.hero p { color: var(--ikkinchi); max-width: 640px; margin: 0 auto 26px; font-size: 1.08rem; }
+.btn {
+  display: inline-block;
+  background: var(--akcent);
+  color: #fff;
+  padding: 12px 28px;
+  border-radius: 10px;
+  font-weight: 600;
+  transition: 0.2s;
+}
+.btn:hover { background: #3a76e8; text-decoration: none; transform: translateY(-2px); }
+.btn.secondary { background: var(--panel2); border: 1px solid var(--chiziq); }
+
+h2.sarlavha {
+  font-size: 1.5rem;
+  margin: 34px 0 18px;
+  padding-left: 12px;
+  border-left: 4px solid var(--akcent);
+}
+
+/* ===== Kartalar ===== */
+.kartalar {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 18px;
+}
+.karta {
+  background: var(--panel);
+  border: 1px solid var(--chiziq);
+  border-radius: 14px;
+  padding: 22px;
+  transition: 0.22s;
+  display: block;
+  color: var(--matn);
+}
+.karta:hover {
+  border-color: var(--akcent);
+  transform: translateY(-4px);
+  text-decoration: none;
+  box-shadow: 0 8px 24px rgba(79, 140, 255, 0.12);
+}
+.karta .ikon { font-size: 2.2rem; }
+.karta h3 { margin: 10px 0 6px; font-size: 1.15rem; }
+.karta p { color: var(--ikkinchi); font-size: 0.92rem; }
+.badge {
+  display: inline-block;
+  background: var(--panel2);
+  border: 1px solid var(--chiziq);
+  color: var(--ikkinchi);
+  font-size: 0.78rem;
+  padding: 3px 10px;
+  border-radius: 999px;
+  margin-top: 12px;
+  margin-right: 6px;
+}
+
+/* ===== Kurs sahifasi ===== */
+.kurs-bosh {
+  background: var(--panel);
+  border: 1px solid var(--chiziq);
+  border-radius: 16px;
+  padding: 26px;
+  margin-bottom: 26px;
+}
+.kurs-bosh h1 { font-size: 1.8rem; margin-bottom: 8px; }
+.kurs-bosh p { color: var(--ikkinchi); }
+
+.darslar { display: flex; flex-direction: column; gap: 12px; }
+.dars-qator {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: var(--panel);
+  border: 1px solid var(--chiziq);
+  border-radius: 12px;
+  padding: 16px 18px;
+  color: var(--matn);
+  transition: 0.18s;
+}
+.dars-qator:hover {
+  border-color: var(--akcent2);
+  text-decoration: none;
+  transform: translateX(4px);
+}
+.dars-raqam {
+  min-width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: var(--panel2);
+  border: 1px solid var(--chiziq);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  color: var(--akcent);
+}
+.dars-raqam .yt { color: var(--xato); font-size: 0.7rem; }
+.dars-info h4 { font-size: 1.02rem; margin-bottom: 2px; }
+.dars-info span { color: var(--ikkinchi); font-size: 0.88rem; }
+
+/* ===== Dars sahifasi ===== */
+.dars-sarlavha { margin-bottom: 6px; font-size: 1.7rem; }
+.dars-tafrif { color: var(--ikkinchi); margin-bottom: 22px; }
+
+.video-quti {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%;
+  background: #000;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid var(--chiziq);
+  margin-bottom: 26px;
+}
+.video-quti iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.matn-blok p { margin-bottom: 14px; color: #cdd6e1; }
+
+pre.kod {
+  background: #0a0e14;
+  border: 1px solid var(--chiziq);
+  border-left: 4px solid var(--akcent2);
+  border-radius: 10px;
+  padding: 16px;
+  overflow-x: auto;
+  font-family: Consolas, "Courier New", monospace;
+  color: #7ee787;
+  font-size: 0.95rem;
+  margin: 18px 0;
+}
+
+.dars-tugash {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid var(--chiziq);
+}
+
+/* ===== API ===== */
+pre.api {
+  background: var(--panel);
+  border: 1px solid var(--chiziq);
+  border-radius: 10px;
+  padding: 16px;
+  overflow-x: auto;
+  color: #79c0ff;
+  font-family: Consolas, monospace;
+  font-size: 0.9rem;
+}
+
+/* ===== Footer ===== */
+footer {
+  border-top: 1px solid var(--chiziq);
+  background: var(--panel);
+  text-align: center;
+  padding: 22px;
+  color: var(--ikkinchi);
+  font-size: 0.9rem;
+}
+footer b { color: var(--matn); }
+
+@media (max-width: 600px) {
+  .dars-qator { gap: 10px; padding: 13px; }
+  .hero { padding: 40px 16px 34px; }
+}

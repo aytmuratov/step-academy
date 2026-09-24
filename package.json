@@ -1,0 +1,13 @@
+{
+  "name": "step-academy",
+  "version": "1.0.0",
+  "description": "Step Academy - AI orqali yaratilgan o'quv markazi sayti (o'zbek tilida)",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=16"
+  },
+  "license": "MIT"
+}
